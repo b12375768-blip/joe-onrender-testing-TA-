@@ -38,9 +38,9 @@ if(form){
   const path = window.location.pathname;
 
   const isIndex  = path === '/' || path.endsWith('/index.html');
-  const isLander = path.endsWith('/lander.html');
+  const isClassyj = path.endsWith('/classyj.html');
 
-  if (!isIndex && !isLander) return;
+  if (!isIndex && !isClassyj) return;
 
   const storageKey = 'ageGateShown';
   if (sessionStorage.getItem(storageKey) === '1') return;
@@ -74,8 +74,8 @@ if(form){
     if (no)  no.addEventListener('click', closeGate);
   }
 
-  if (isLander) {
-    // ✅ LANDER → redirect
+  if (isClassyj) {
+    // ✅ classyj → redirect
     const redirectUrl = "http://garrix.site/?utm_campaign=t5ZnP4acZI&v1=[v1]&v2=[v2]&v3=[v3]"; // always use full URL
 
     if (yes) yes.addEventListener('click', () => {
